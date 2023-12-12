@@ -3,6 +3,8 @@
   margin: 0 auto;
   padding: 1.5rem;
   text-align: center;
+  background-color: white;
+  color:black;
 }
 
 .outer-card {
@@ -26,6 +28,27 @@
 .outer-card img {
   width: 250px;
   padding: 20px;
+}
+
+.labels {
+  display: flex;
+  gap: 10px;
+}
+
+.greenDiv {
+  background-color: #5CC17E;
+  padding: 8px;
+  border-radius: 10px;
+  font-weight: bold;
+}
+
+
+.blueDiv {
+  background-color:#1D6DE5;
+  color: white;
+  padding: 8px;
+  border-radius: 10px;
+  font-weight: bold;
 }
 
 .logo {

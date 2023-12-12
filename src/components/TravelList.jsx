@@ -1,7 +1,8 @@
-
+import { useState } from "react";
 
 function TravelList ({travelplans}) {
-    
+    const [plans, setPlans] = useState(travelplans);
+
     return (
     <>
     {travelplans.map((plan) => {
@@ -13,9 +14,9 @@ function TravelList ({travelplans}) {
               <p> {plan.description} </p>
               <p> <span>Price:</span> {plan.totalCost} €</p>
               <div className="labels">
-                {plan.totalCost <= 350 && <span>Great Deal</span>}
-                {plan.totalCost >= 1500 && <span>Premium</span>}
-                {plan.allInclusive && <span>All Inclusive</span>}
+                {plan.totalCost <= 350 && <span className="greenDiv">Great Deal</span>}
+                {plan.totalCost >= 1500 && <span className="blueDiv">Premium</span>}
+                {plan.allInclusive && <span className="blueDiv">All Inclusive</span>}
               </div>
             </div>
           </div>

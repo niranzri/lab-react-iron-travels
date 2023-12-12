@@ -1,5 +1,4 @@
 import logo from "./data/logo.png";
-import { useState } from "react";
 import travelPlansData from "./data/travel-plans.json";
 import TravelList from "./components/TravelList";
 import "./App.css";
@@ -7,7 +6,7 @@ import "./App.css";
 
 
 function App() {
-  const [plans, setPlans] = useState(travelPlansData);
+
   return (
     <>
       <div>

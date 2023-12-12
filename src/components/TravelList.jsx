@@ -3,6 +3,11 @@ import { useState } from "react";
 function TravelList ({travelplans}) {
     const [plans, setPlans] = useState(travelplans);
 
+    const handleDelete = (id) => {
+        const newPlans = plans.filter(plan => plan.id !== id);
+        setPlans(newPlans);
+    }
+
     return (
     <>
     {travelplans.map((plan) => {
@@ -18,6 +23,7 @@ function TravelList ({travelplans}) {
                 {plan.totalCost >= 1500 && <span className="blueDiv">Premium</span>}
                 {plan.allInclusive && <span className="blueDiv">All Inclusive</span>}
               </div>
+              <button className="deleteButton" onClick = {() => handleDelete(plan.id)}> Delete </button>
             </div>
           </div>
         )

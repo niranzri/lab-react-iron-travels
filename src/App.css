@@ -10,7 +10,7 @@
 .outer-card {
   display:flex;
   margin: 10px;
-  height: 200px;
+  height: 250px;
   border: 2px solid black;
 }
 
@@ -49,6 +49,21 @@
   padding: 8px;
   border-radius: 10px;
   font-weight: bold;
+}
+
+.deleteButton {
+  padding-top: 10px;
+  margin: 10px 0 10px 0;
+  width: auto;
+  height: 50px;
+  text-align: center;
+  background-color:rgba(229, 234, 238);
+  border-radius: 10px;
+  color: black;
+  border: black;
+  border-width: 1px;
+  border-style: solid;
+  cursor: pointer;
 }
 
 .logo {

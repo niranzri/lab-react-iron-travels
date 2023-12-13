@@ -4,13 +4,16 @@ function TravelList ({travelplans}) {
     const [plans, setPlans] = useState(travelplans);
 
     const handleDelete = (id) => {
-        const newPlans = plans.filter(plan => plan.id !== id);
+        const newPlans = plans.filter(plan => {
+          return plan.id !== id
+        });
+        
         setPlans(newPlans);
     }
 
     return (
     <>
-    {travelplans.map((plan) => {
+    {plans.map((plan) => {
         return (
           <div key={plan.id} className="outer-card">
             <img src={plan.image} alt="destination image"/>
